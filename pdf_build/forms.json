@@ -1,0 +1,140 @@
+{
+  "properties": {
+    "Agenda": {
+      "type": "string"
+    },
+    "Agenda 1": {
+      "type": "string"
+    },
+    "Agenda 2": {
+      "type": "string"
+    },
+    "Agenda 3": {
+      "type": "string"
+    },
+    "Agenda 4": {
+      "type": "string"
+    },
+    "Attendees": {
+      "type": "string"
+    },
+    "Attendees 1": {
+      "type": "string"
+    },
+    "Attendees 2": {
+      "type": "string"
+    },
+    "Attendees 3": {
+      "type": "string"
+    },
+    "Attendees 4": {
+      "type": "string"
+    },
+    "Check Box 1": {
+      "type": "boolean"
+    },
+    "Check Box 2": {
+      "type": "boolean"
+    },
+    "Check Box 3": {
+      "type": "boolean"
+    },
+    "Check Box 4": {
+      "type": "boolean"
+    },
+    "Check Box 5": {
+      "type": "boolean"
+    },
+    "Check Box 6": {
+      "type": "boolean"
+    },
+    "Check Box 7": {
+      "type": "boolean"
+    },
+    "Date": {
+      "type": "string"
+    },
+    "Due": {
+      "type": "string"
+    },
+    "Due 1": {
+      "type": "string"
+    },
+    "Due 2": {
+      "type": "string"
+    },
+    "Due 3": {
+      "type": "string"
+    },
+    "Due 4": {
+      "type": "string"
+    },
+    "Due 5": {
+      "type": "string"
+    },
+    "Due 6": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Meeting notes": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "string"
+    },
+    "Owner 1": {
+      "type": "string"
+    },
+    "Owner 2": {
+      "type": "string"
+    },
+    "Owner 3": {
+      "type": "string"
+    },
+    "Owner 4": {
+      "type": "string"
+    },
+    "Owner 5": {
+      "type": "string"
+    },
+    "Owner 6": {
+      "type": "string"
+    },
+    "Purpose": {
+      "type": "string"
+    },
+    "Recorded by": {
+      "type": "string"
+    },
+    "Task": {
+      "type": "string"
+    },
+    "Task 1": {
+      "type": "string"
+    },
+    "Task 2": {
+      "type": "string"
+    },
+    "Task 3": {
+      "type": "string"
+    },
+    "Task 4": {
+      "type": "string"
+    },
+    "Task 5": {
+      "type": "string"
+    },
+    "Task 6": {
+      "type": "string"
+    },
+    "Time": {
+      "type": "string"
+    },
+    "Title": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

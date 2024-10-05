@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Meeting Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group input[type="time"],
+        .form-group textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Team Meeting Form</h1>
+
+        <form method="POST">
+            <!-- Team Name -->
+            <div class="form-section">
+                <h2>Team Name</h2>
+                <div class="form-group">
+                    <label for="Title">Team Name:</label>
+                    <input type="text" name="Title" id="Title" placeholder="Enter Team Name" required>
+                </div>
+            </div>
+
+            <!-- Line 1: Date, Time, Location -->
+            <div class="form-section">
+                <h2>Meeting Details</h2>
+                <div class="form-group">
+                    <label for="Date">Date:</label>
+                    <input type="date" name="Date" id="Date" required>
+                </div>
+                <div class="form-group">
+                    <label for="Time">Time:</label>
+                    <input type="time" name="Time" id="Time" required>
+                </div>
+                <div class="form-group">
+                    <label for="Location">Location:</label>
+                    <input type="text" name="Location" id="Location" placeholder="Enter Location" required>
+                </div>
+            </div>
+
+            <!-- Line 2: Purpose, Recorded by -->
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="Purpose">Purpose:</label>
+                    <input type="text" name="Purpose" id="Purpose" placeholder="Enter Purpose" required>
+                </div>
+                <div class="form-group">
+                    <label for="RecordedBy">Recorded by:</label>
+                    <input type="text" name="Recorded by" id="RecordedBy" placeholder="Enter Recorder's Name" required>
+                </div>
+            </div>
+
+            <!-- Attendees -->
+            <div class="form-section">
+                <h2>Attendees</h2>
+                <div class="form-group">
+                    <label for="Attendees">Attendee 1:</label>
+                    <input type="text" name="Attendees" id="Attendees" placeholder="Enter Attendee 1" required>
+                </div>
+                <div class="form-group">
+                    <label for="Attendees1">Attendee 2:</label>
+                    <input type="text" name="Attendees 1" id="Attendees1" placeholder="Enter Attendee 2">
+                </div>
+                <div class="form-group">
+                    <label for="Attendees2">Attendee 3:</label>
+                    <input type="text" name="Attendees 2" id="Attendees2" placeholder="Enter Attendee 3">
+                </div>
+                <div class="form-group">
+                    <label for="Attendees3">Attendee 4:</label>
+                    <input type="text" name="Attendees 3" id="Attendees3" placeholder="Enter Attendee 4">
+                </div>
+                <div class="form-group">
+                    <label for="Attendees4">Attendee 5:</label>
+                    <input type="text" name="Attendees 4" id="Attendees4" placeholder="Enter Attendee 5">
+                </div>
+            </div>
+
+            <!-- Agenda -->
+            <div class="form-section">
+                <h2>Agenda</h2>
+                <div class="form-group">
+                    <label for="Agenda">Agenda Item 1:</label>
+                    <input type="text" name="Agenda" id="Agenda" placeholder="Enter Agenda 1" required>
+                </div>
+                <div class="form-group">
+                    <label for="Agenda1">Agenda Item 2:</label>
+                    <input type="text" name="Agenda 1" id="Agenda1" placeholder="Enter Agenda 2">
+                </div>
+                <div class="form-group">
+                    <label for="Agenda2">Agenda Item 3:</label>
+                    <input type="text" name="Agenda 2" id="Agenda2" placeholder="Enter Agenda 3">
+                </div>
+                <div class="form-group">
+                    <label for="Agenda3">Agenda Item 4:</label>
+                    <input type="text" name="Agenda 3" id="Agenda3" placeholder="Enter Agenda 4">
+                </div>
+                <div class="form-group">
+                    <label for="Agenda4">Agenda Item 5:</label>
+                    <input type="text" name="Agenda 4" id="Agenda4" placeholder="Enter Agenda 5">
+                </div>
+            </div>
+
+            <!-- Meeting Notes -->
+            <div class="form-section">
+                <h2>Meeting Notes</h2>
+                <div class="form-group">
+                    <label for="MeetingNotes">Meeting Notes:</label>
+                    <textarea name="Meeting notes" id="MeetingNotes" placeholder="Enter Meeting Notes"></textarea>
+                </div>
+            </div>
+
+            <!-- Tasks -->
+            <div class="form-section">
+                <h2>Task Assignments</h2>
+                <!-- Task 1 -->
+                <div class="task-section">
+                    <div class="form-group">
+                        <label><input type="checkbox" name="Check Box 1"> Activate Task 1</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="Task1">Task:</label>
+                        <input type="text" name="Task" id="Task1" placeholder="Enter Task 1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Owner1">Owner:</label>
+                        <input type="text" name="Owner" id="Owner1" placeholder="Enter Owner 1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Due1">Due Date:</label>
+                        <input type="date" name="Due" id="Due1" required>
+                    </div>
+                </div>
+
+              <!-- Task 2 -->
+              <div class="task-section">
+                  <h2>Task 2</h2>
+                  <div class="form-group">
+                      <label><input type="checkbox" name="Check Box 2"> Activate Task 2</label>
+                  </div>
+                  <div class="form-group">
+                      <label for="Task2">Task:</label>
+                      <input type="text" name="Task 1" id="Task2" placeholder="Enter Task 2">
+                  </div>
+                  <div class="form-group">
+                      <label for="Owner2">Owner:</label>
+                      <input type="text" name="Owner 1" id="Owner2" placeholder="Enter Owner 2">
+                  </div>
+                  <div class="form-group">
+                      <label for="Due2">Due Date:</label>
+                      <input type="date" name="Due 1" id="Due2">
+                  </div>
+              </div>
+
+              <!-- Task 3 -->
+              <div class="task-section">
+                  <h2>Task 3</h2>
+                  <div class="form-group">
+                      <label><input type="checkbox" name="Check Box 3"> Activate Task 3</label>
+                  </div>
+                  <div class="form-group">
+                      <label for="Task3">Task:</label>
+                      <input type="text" name="Task 2" id="Task3" placeholder="Enter Task 3">
+                  </div>
+                  <div class="form-group">
+                      <label for="Owner3">Owner:</label>
+                      <input type="text" name="Owner 2" id="Owner3" placeholder="Enter Owner 3">
+                  </div>
+                  <div class="form-group">
+                      <label for="Due3">Due Date:</label>
+                      <input type="date" name="Due 2" id="Due3">
+                  </div>
+              </div>
+              <!-- Task 4 -->
+              <div class="task-section">
+                  <h2>Task 4</h2>
+                  <div class="form-group">
+                      <label><input type="checkbox" name="Check Box 4"> Activate Task 4</label>
+                  </div>
+                  <div class="form-group">
+                      <label for="Task4">Task:</label>
+                      <input type="text" name="Task 3" id="Task4" placeholder="Enter Task 4">
+                  </div>
+                  <div class="form-group">
+                      <label for="Owner4">Owner:</label>
+                      <input type="text" name="Owner 3" id="Owner4" placeholder="Enter Owner 4">
+                  </div>
+                  <div class="form-group">
+                      <label for="Due4">Due Date:</label>
+                      <input type="date" name="Due 3" id="Due4">
+                  </div>
+              </div>
+              <!-- Task 5 -->
+              <div class="task-section">
+                  <h2>Task 5</h2>
+                  <div class="form-group">
+                      <label><input type="checkbox" name="Check Box 5"> Activate Task 5</label>
+                  </div>
+                  <div class="form-group">
+                      <label for="Task5">Task:</label>
+                      <input type="text" name="Task 4" id="Task5" placeholder="Enter Task 5">
+                  </div>
+                  <div class="form-group">
+                      <label for="Owner5">Owner:</label>
+                      <input type="text" name="Owner 4" id="Owner5" placeholder="Enter Owner 5">
+                  </div>
+                  <div class="form-group">
+                      <label for="Due5">Due Date:</label>
+                      <input type="date" name="Due 4" id="Due5">
+                  </div>
+              </div>
+              <!-- Task 6 -->
+              <div class="task-section">
+                  <h2>Task 6</h2>
+                  <div class="form-group">
+                      <label><input type="checkbox" name="Check Box 6"> Activate Task 6</label>
+                  </div>
+                  <div class="form-group">
+                      <label for="Task6">Task:</label>
+                      <input type="text" name="Task 5" id="Task6" placeholder="Enter Task 6">
+                  </div>
+                  <div class="form-group">
+                      <label for="Owner6">Owner:</label>
+                      <input type="text" name="Owner 5" id="Owner6" placeholder="Enter Owner 6">
+                  </div>
+                  <div class="form-group">
+                      <label for="Due6">Due Date:</label>
+                      <input type="date" name="Due 5" id="Due6">
+                  </div>
+              </div>
+              <!-- Task 7 -->
+              <div class="task-section">
+                  <h2>Task 7</h2>
+                  <div class="form-group">
+                      <label><input type="checkbox" name="Check Box 7"> Activate Task 7</label>
+                  </div>
+                  <div class="form-group">
+                      <label for="Task7">Task:</label>
+                      <input type="text" name="Task 6" id="Task7" placeholder="Enter Task 7">
+                  </div>
+                  <div class="form-group">
+                      <label for="Owner7">Owner:</label>
+                      <input type="text" name="Owner 6" id="Owner7" placeholder="Enter Owner 7">
+                  </div>
+                  <div class="form-group">
+                      <label for="Due7">Due Date:</label>
+                      <input type="date" name="Due 6" id="Due7">
+                  </div>
+              </div>
+
+
+
+
+
+                <!-- Repeat for Task 2, Task 3, etc. -->
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
