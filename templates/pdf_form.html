@@ -98,7 +98,7 @@
                 <h2>Team Name</h2>
                 <div class="form-group">
                     <label for="Title">Team Name:</label>
-                    <input type="text" name="Title" id="Title" placeholder="Enter Team Name" required>
+                    <input type="text" name="Title" id="Title" placeholder="Enter Team Name">
                 </div>
             </div>
 
@@ -107,15 +107,15 @@
                 <h2>Meeting Details</h2>
                 <div class="form-group">
                     <label for="Date">Date:</label>
-                    <input type="date" name="Date" id="Date" required>
+                    <input type="date" name="Date" id="Date">
                 </div>
                 <div class="form-group">
                     <label for="Time">Time:</label>
-                    <input type="time" name="Time" id="Time" required>
+                    <input type="time" name="Time" id="Time">
                 </div>
                 <div class="form-group">
                     <label for="Location">Location:</label>
-                    <input type="text" name="Location" id="Location" placeholder="Enter Location" required>
+                    <input type="text" name="Location" id="Location" placeholder="Enter Location">
                 </div>
             </div>
 
@@ -123,11 +123,11 @@
             <div class="form-section">
                 <div class="form-group">
                     <label for="Purpose">Purpose:</label>
-                    <input type="text" name="Purpose" id="Purpose" placeholder="Enter Purpose" required>
+                    <input type="text" name="Purpose" id="Purpose" placeholder="Enter Purpose">
                 </div>
                 <div class="form-group">
                     <label for="RecordedBy">Recorded by:</label>
-                    <input type="text" name="Recorded by" id="RecordedBy" placeholder="Enter Recorder's Name" required>
+                    <input type="text" name="Recorded by" id="RecordedBy" placeholder="Enter Recorder's Name">
                 </div>
             </div>
 
@@ -136,7 +136,7 @@
                 <h2>Attendees</h2>
                 <div class="form-group">
                     <label for="Attendees">Attendee 1:</label>
-                    <input type="text" name="Attendees" id="Attendees" placeholder="Enter Attendee 1" required>
+                    <input type="text" name="Attendees" id="Attendees" placeholder="Enter Attendee 1">
                 </div>
                 <div class="form-group">
                     <label for="Attendees1">Attendee 2:</label>
@@ -161,7 +161,7 @@
                 <h2>Agenda</h2>
                 <div class="form-group">
                     <label for="Agenda">Agenda Item 1:</label>
-                    <input type="text" name="Agenda" id="Agenda" placeholder="Enter Agenda 1" required>
+                    <input type="text" name="Agenda" id="Agenda" placeholder="Enter Agenda 1">
                 </div>
                 <div class="form-group">
                     <label for="Agenda1">Agenda Item 2:</label>
@@ -200,15 +200,15 @@
                     </div>
                     <div class="form-group">
                         <label for="Task1">Task:</label>
-                        <input type="text" name="Task" id="Task1" placeholder="Enter Task 1" required>
+                        <input type="text" name="Task" id="Task1" placeholder="Enter Task 1">
                     </div>
                     <div class="form-group">
                         <label for="Owner1">Owner:</label>
-                        <input type="text" name="Owner" id="Owner1" placeholder="Enter Owner 1" required>
+                        <input type="text" name="Owner" id="Owner1" placeholder="Enter Owner 1">
                     </div>
                     <div class="form-group">
                         <label for="Due1">Due Date:</label>
-                        <input type="date" name="Due" id="Due1" required>
+			<input type="date" name="Due" id="Due1">
                     </div>
                 </div>
 
@@ -327,16 +327,21 @@
                       <input type="date" name="Due 6" id="Due7">
                   </div>
               </div>
-
-
-
-
-
-                <!-- Repeat for Task 2, Task 3, etc. -->
             </div>
-
             <button type="submit">Submit</button>
         </form>
     </div>
+   <script>
+        // Set today's date as the default value for the date input
+        const today = new Date();
+        const dateInput = document.getElementById('Date');
+        dateInput.value = today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+
+        // Set the current time as the default value for the time input
+        const timeInput = document.getElementById('Time');
+        const hours = today.getHours().toString().padStart(2, '0');
+        const minutes = today.getMinutes().toString().padStart(2, '0');
+        timeInput.value = `${hours}:${minutes}`; // Format: HH:MM
+    </script>
 </body>
 </html>

@@ -1,20 +1,40 @@
-# Step 1: Use an official Python runtime as the base image
+# Start from a Python image
 FROM python:3.10-slim
 
-# Step 2: Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Step 3: Copy the current directory contents into the container at /app
-COPY . /app
+# Create a virtual environment path
+ENV VIRTUAL_ENV=/opt/venv
 
-# Step 4: Install any necessary dependencies
+# Install virtualenv and create the virtual environment
+RUN python -m venv $VIRTUAL_ENV
+
+# Make sure the virtualenv binaries are used
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# Install dependencies into the virtualenv
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Step 5: Expose the port the app will run on
-EXPOSE 8000
+# Copy the rest of the application code
+COPY . .
 
-# Step 6: Define the environment variable for production (optional)
+# Create a non-root user and switch to that user
+RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
+
+# Ensure proper permissions for the appuser
+RUN chown -R appuser:appgroup /app
+
+# Switch to the non-root user
+USER appuser
+
+# Expose the application port
+EXPOSE 8080
+
+# Set environment variables
 ENV FLASK_ENV=production
 
-# Step 7: Run gunicorn server
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "wsgi:app"]
+# Run the application with gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+
